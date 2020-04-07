@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Goal } from '../goal';
+import { GoalService } from '../goal-service/goal.service';
 
 @Component({
   selector: 'app-goal',
@@ -34,7 +35,9 @@ deleteGoal(isComplete, index){
   }
 }
 
-  constructor() { }
+  constructor(goalService:GoalService) {
+    // this.goals = goalService.getGoals()
+   }
 
   ngOnInit() {
   }
